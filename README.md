@@ -1,6 +1,7 @@
 # ClockIndicator
 [![Code Climate](https://codeclimate.com/github/jcmuller/clock_indicator/badges/gpa.svg)](https://codeclimate.com/github/jcmuller/clock_indicator)
 [![Test Coverage](https://codeclimate.com/github/jcmuller/clock_indicator/badges/coverage.svg)](https://codeclimate.com/github/jcmuller/clock_indicator)
+[![Dependency Status](https://gemnasium.com/jcmuller/clock_indicator.svg)](https://gemnasium.com/jcmuller/clock_indicator)
 
 TODO: Write a gem description
 
