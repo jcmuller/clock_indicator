@@ -9,4 +9,3 @@ module ClockIndicator
     end
   end
 end
-
