@@ -3,8 +3,8 @@ module ClockIndicator
 
     private
 
-      def month
-        1.month.ago
+      def date
+        i.month.ago
       end
   end
 end

@@ -3,8 +3,8 @@ module ClockIndicator
 
     private
 
-      def month
-        1.month.from_now
+      def date
+        i.month.from_now
       end
   end
 end

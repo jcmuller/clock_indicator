@@ -13,8 +13,4 @@ module ClockIndicator
   autoload :OtherMonthCalendar,   "clock_indicator/other_month_calendar"
   autoload :SubMenu,              "clock_indicator/sub_menu"
   autoload :VERSION,              "clock_indicator/version"
-
-  OTHER_CALENDAR_OPTIONS = Gtk::CalendarDisplayOptions[:no_month_change] |
-    Gtk::CalendarDisplayOptions[:show_day_names] |
-    Gtk::CalendarDisplayOptions[:show_heading]
 end

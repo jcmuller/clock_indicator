@@ -16,7 +16,7 @@ module ClockIndicator
       def tray_icon
         @tray_icon ||= Gtkti::TrayIcon.new("ClockIndicator::Clock").tap do |ti|
           ti.add(event_box)
-          ti.set_tooltip_text(tooltip_status)
+          ti.tooltip_text = tooltip_status
         end
       end
 
@@ -76,7 +76,7 @@ module ClockIndicator
       end
 
       def font
-        Pango::FontDescription.from_string("Ubuntu 10")
+        Pango::FontDescription.from_string("Ubuntu 12")
       end
 
       def time
@@ -84,7 +84,7 @@ module ClockIndicator
       end
 
       def time_format
-        "%a %m/%d/%Y <b>%I:%M%P</b>"
+        "%a %m/%d/%Y <b>%I:%M%P</b> "
       end
 
       def start_update_thread
@@ -103,9 +103,10 @@ module ClockIndicator
       end
 
       def gtk_update_ui
-        tray_label.set_markup(time)
-        tray_icon.set_tooltip_text(tooltip_status)
-        sub_menu.set_time(time_item_text)
+        tray_label.markup = time
+        tray_label.override_font(font)
+        tray_icon.tooltip_text = tooltip_status
+        sub_menu.time = time_item_text
       end
 
   end

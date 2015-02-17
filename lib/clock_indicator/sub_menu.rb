@@ -3,8 +3,8 @@ module ClockIndicator
 
     delegate :popup, :to => :menu
 
-    def set_time(time)
-      time_item.set_label(time)
+    def time=(time)
+      time_item.label = time
     end
 
     private

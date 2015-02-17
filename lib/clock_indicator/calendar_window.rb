@@ -8,34 +8,39 @@ module ClockIndicator
 
     private
 
+      CAL_WIDTH = 200
+
+      def cals_in_window
+        (Gdk::Screen.width / CAL_WIDTH) / 2
+      end
+
       def window
         @window ||= Gtk::Window.new(:toplevel).tap do |window|
-          window.set_position(Gtk::WindowPosition[:mouse])
-          window.set_type_hint(Gdk::WindowTypeHint[:dock])
+          window.position  = Gtk::WindowPosition[:mouse]
+          window.type_hint = Gdk::WindowTypeHint[:dock]
           window.add(hbox)
         end
       end
 
       def add_calendars
-        hbox.add(last_month_calendar.calendar)
+        cals_in_window.downto(1).each do |i|
+          hbox.add(LastMonthCalendar.new(i).calendar)
+        end
+
         hbox.add(current_month_calendar.calendar)
-        hbox.add(next_month_calendar.calendar)
+
+        1.upto(cals_in_window).each do |i|
+          hbox.add(NextMonthCalendar.new(i).calendar)
+        end
       end
 
       def hbox
         @hbox ||= Gtk::HBox.new(true, 10)
       end
 
-      def last_month_calendar
-        @last_month_calendar ||= LastMonthCalendar.new
-      end
-
       def current_month_calendar
         @current_month_calendar ||= CurrentMonthCalendar.new
       end
 
-      def next_month_calendar
-        @next_month_calendar ||= NextMonthCalendar.new
-      end
   end
 end
