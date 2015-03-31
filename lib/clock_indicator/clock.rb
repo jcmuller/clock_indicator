@@ -31,7 +31,7 @@ module ClockIndicator
       end
 
       def time_item_text
-        Time.new.strftime("%A, %B %e, %Y %I:%M:%S %P")
+        Time.new.strftime("%A, %B %e, %Y %I:%M:%S %P".freeze)
       end
 
       def sub_menu
@@ -84,7 +84,7 @@ module ClockIndicator
       end
 
       def time_format
-        "%a %m/%d/%Y <b>%I:%M%P</b> "
+        "%a %m/%d/%Y <b>%I:%M%P</b> ".freeze
       end
 
       def start_update_thread
