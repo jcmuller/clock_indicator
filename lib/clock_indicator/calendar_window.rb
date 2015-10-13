@@ -11,7 +11,7 @@ module ClockIndicator
       CAL_WIDTH = 350
 
       def cals_in_window
-        (Gdk::Screen.width / CAL_WIDTH) / 2
+        [(Gdk::Screen.width / CAL_WIDTH) / 2, 3].min
       end
 
       def window
