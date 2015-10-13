@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    clock_indicator (0.0.1)
+    clock_indicator (0.0.2)
       activesupport
       gir_ffi-gtk
 
