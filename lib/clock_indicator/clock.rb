@@ -76,7 +76,7 @@ module ClockIndicator
       end
 
       def font
-        Pango::FontDescription.from_string("Ubuntu 12")
+        Pango::FontDescription.from_string("Terminus 10")
       end
 
       def time
