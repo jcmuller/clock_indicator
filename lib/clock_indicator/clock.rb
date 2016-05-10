@@ -64,7 +64,7 @@ module ClockIndicator
 
       def popup_sub_menu(event)
         gtk_update_ui
-        sub_menu.popup(nil, nil, pos(event), nil, event.button, event.time)
+        sub_menu.popup(nil, nil, event.button, event.time)
       end
 
       def calendar_window
