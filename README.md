@@ -26,10 +26,12 @@ wouldn't work. So, I set out to writing one.
 ## Installation
 
 Get https://github.com/PaulSD/Tray_Apps/tree/master/gtktrayicon
-    $ sudo apt-get install libgirepository1.0-dev gobject-introspection libgtk-3-dev
-sudo make install
+```bash
+$ sudo apt-get install libgirepository1.0-dev gobject-introspection libgtk-3-dev
+$ sudo make install
 
-    $ gem install clock_indicator
+$ gem install clock_indicator
+```
 
 ## Usage
 
